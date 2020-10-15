@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="image">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>40</y>
+      <width>720</width>
+      <height>470</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="resources.qrc">:/myImages/island.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="file_menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="open_file"/>
+    <addaction name="save_file_as"/>
+    <addaction name="separator"/>
+    <addaction name="exit"/>
+   </widget>
+   <widget class="QMenu" name="filters">
+    <property name="title">
+     <string>Фильтры</string>
+    </property>
+    <widget class="QMenu" name="point">
+     <property name="title">
+      <string>Точечные</string>
+     </property>
+     <addaction name="inversion"/>
+     <addaction name="grayscale"/>
+     <addaction name="sepia"/>
+     <addaction name="brightness"/>
+     <addaction name="moving"/>
+     <addaction name="glass"/>
+     <addaction name="ideal_reflector"/>
+     <addaction name="linear_stretch"/>
+    </widget>
+    <widget class="QMenu" name="matrix">
+     <property name="title">
+      <string>Матричные</string>
+     </property>
+     <addaction name="blur"/>
+     <addaction name="gaussian_blur"/>
+     <addaction name="sobel"/>
+     <addaction name="sharpness"/>
+     <addaction name="sharpness_max"/>
+     <addaction name="scharr"/>
+     <addaction name="embossing"/>
+     <addaction name="median_filter"/>
+    </widget>
+    <widget class="QMenu" name="morphology">
+     <property name="title">
+      <string>Устранение шума</string>
+     </property>
+     <addaction name="dilation"/>
+     <addaction name="erosion"/>
+     <addaction name="closing"/>
+     <addaction name="opening"/>
+     <addaction name="black_hat"/>
+     <addaction name="structuring_element"/>
+    </widget>
+    <addaction name="point"/>
+    <addaction name="matrix"/>
+    <addaction name="morphology"/>
+    <addaction name="separator"/>
+    <addaction name="origin"/>
+   </widget>
+   <addaction name="file_menu"/>
+   <addaction name="filters"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="inversion">
+   <property name="text">
+    <string>Инверсия</string>
+   </property>
+  </action>
+  <action name="open_file">
+   <property name="text">
+    <string>Открыть файл</string>
+   </property>
+  </action>
+  <action name="grayscale">
+   <property name="text">
+    <string>Оттенки серого</string>
+   </property>
+  </action>
+  <action name="sepia">
+   <property name="text">
+    <string>Сепия</string>
+   </property>
+  </action>
+  <action name="brightness">
+   <property name="text">
+    <string>Яркость</string>
+   </property>
+  </action>
+  <action name="blur">
+   <property name="text">
+    <string>Размытие</string>
+   </property>
+  </action>
+  <action name="gaussian_blur">
+   <property name="text">
+    <string>Размытие по Гауссу</string>
+   </property>
+  </action>
+  <action name="sobel">
+   <property name="text">
+    <string>Фильтр Собеля</string>
+   </property>
+  </action>
+  <action name="sharpness">
+   <property name="text">
+    <string>Резкость</string>
+   </property>
+  </action>
+  <action name="moving">
+   <property name="text">
+    <string>Перенос</string>
+   </property>
+  </action>
+  <action name="glass">
+   <property name="text">
+    <string>Эффект &quot;стекла&quot;</string>
+   </property>
+  </action>
+  <action name="sharpness_max">
+   <property name="text">
+    <string>Резкость (максимальная)</string>
+   </property>
+  </action>
+  <action name="scharr">
+   <property name="text">
+    <string>Выделение границ (по Щарру)</string>
+   </property>
+  </action>
+  <action name="dilation">
+   <property name="text">
+    <string>Расширение</string>
+   </property>
+  </action>
+  <action name="erosion">
+   <property name="text">
+    <string>Сужение</string>
+   </property>
+  </action>
+  <action name="closing">
+   <property name="text">
+    <string>Закрытие</string>
+   </property>
+  </action>
+  <action name="opening">
+   <property name="text">
+    <string>Раскрытие</string>
+   </property>
+  </action>
+  <action name="black_hat">
+   <property name="text">
+    <string>Black Hat</string>
+   </property>
+  </action>
+  <action name="structuring_element">
+   <property name="text">
+    <string>Задать структурирующий элемент</string>
+   </property>
+  </action>
+  <action name="save_file_as">
+   <property name="text">
+    <string>Сохранить файл как...</string>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="text">
+    <string>Выйти</string>
+   </property>
+  </action>
+  <action name="origin">
+   <property name="text">
+    <string>Исходное изображение</string>
+   </property>
+  </action>
+  <action name="embossing">
+   <property name="text">
+    <string>Тиснение</string>
+   </property>
+  </action>
+  <action name="ideal_reflector">
+   <property name="text">
+    <string>Идеальный отражатель</string>
+   </property>
+  </action>
+  <action name="linear_stretch">
+   <property name="text">
+    <string>Линейное растяжение</string>
+   </property>
+  </action>
+  <action name="median_filter">
+   <property name="text">
+    <string>Медианный фильтр</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
